@@ -41,23 +41,28 @@
 
 /* Social Media Section */
 .social {
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social p {
   margin-bottom: 10px;
   font-size: 16px;
+  color: #c9c9c9;
 }
 
 .socialIcons {
   display: flex;
   gap: 15px;
+  margin-left: 10px;
 }
 
 .socialIcons a {
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   text-decoration: none;
+  transition: all 300ms ease;
 }
 
 .socialIcons a:hover {
@@ -90,10 +95,11 @@
   text-decoration: none;
   list-style: none;
   font-size: 16px;
+  transition: all 300ms ease;
 }
 
 .linksSection ul li a:hover {
-  color: #1e90ff;
+  color: #ffb121;
 }
 
 /* Copyright Section */
@@ -112,15 +118,17 @@
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+  }
+
+  .logo h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
   }
 
   .logoSection,
   .linksSection {
     margin-bottom: 20px;
-  }
-
-  .socialIcons {
-    justify-content: center;
   }
 }

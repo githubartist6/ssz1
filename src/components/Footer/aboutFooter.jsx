@@ -30,7 +30,7 @@ export function AboutFooter () {
         </div>
 
 
-        <div classNameName="linksSection">
+        <div className="linksSection">
           <h3>USEFUL LINKS</h3>
           <ul>
             <li><Link to={"/"}>Home Page</Link></li>
@@ -41,7 +41,7 @@ export function AboutFooter () {
         </div>
 
 
-        <div classNameName="linksSection">
+        <div className="linksSection">
           <h3>IMPORTANT LINKS</h3>
           <ul>
             <li><Link to={"/about"}>About Us</Link></li>
@@ -52,7 +52,7 @@ export function AboutFooter () {
       </div>
       
 
-      <div classNameName="copyright">
+      <div className="copyright">
         <p>© 2024 Sakatpur Smart Zone. All rights reserved</p>
       </div>
     </footer>

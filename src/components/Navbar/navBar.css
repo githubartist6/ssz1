@@ -84,7 +84,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    height: 80px;
+    padding: 0px 80px;
     background: #e3e6f3;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
     z-index: 99;
@@ -93,8 +94,24 @@ body {
     left: 0px;
 }
 
+.header a {
+    margin-top: 17px;
+}
+
 .header a img {
-    height: 30px;
+    height: 60px;
+    width: 58.2px;
+    animation: rotateImage 12s linear infinite;
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .navbar {
@@ -111,7 +128,9 @@ body {
 
 .navbar li a {
     text-decoration: none;
-    font-size: 16px;
+    border: none;
+    outline: none;
+    font-size: 18px;
     font-weight: 600;
     color: #1a1a1a;
     transition: all 300ms ease;
@@ -162,6 +181,7 @@ body {
 .hero h4 {
     padding-bottom: 15px;
 }
+
 .hero h1 {
     color: #088178;
 }
@@ -247,19 +267,130 @@ body {
     background: #cdd4f2;
 }
 
-/* .feature .fe-box:nth-child(2) h6 {
-    background: #cdebbc;
+/* ================= Contacts =============== */
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.feature .fe-box:nth-child(3) h6 {
-    background: #d1e8f2;
+.contact-details .details {
+    width: 40%;
 }
 
-.feature .fe-box:nth-child(4) h6 {
-    background: #cdd4f2;
-} */
+.from-details form span {
+    font-size: 12px;
+}
 
+.contact-details .details h2,
+.from-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0px;
+}
 
+.contact-details .details li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0px;
+}
+
+.contact-details .details li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+.contact-details .details li p {
+    margin: 0px;
+    font-size: 14px;
+}
+
+.contact-details .map {
+    width: 55%;
+    height: 370px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    margin-bottom: 40px;
+    
+    transition: all 300ms ease;
+}
+
+.contact-details .map:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.252);
+}
+
+.contact-details .map h2 {
+    font-size: 26px;
+    line-height: 35px;
+}
+
+.contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.from-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 40px 80px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 80px;
+}
+
+.from-details form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.from-details form input,
+.from-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+.from-details form button {
+    background: #088178;
+    color: #fff;
+    transition: all 300ms ease;
+}
+
+.from-details form button:hover {
+    background: #04544f;
+}
+
+.from-details .people div {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.from-details .people div img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.from-details .people div p {
+    margin: 0px;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.from-details .people div p span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
 
 /* ========================================= End of css home page =================================== */
 
@@ -320,9 +451,9 @@ body {
     }
 
     .hero {
-       height: 80vh;
-       padding: 0px 15px 40px 25px;
-       background-position: top 30% right 30%;
+        height: 80vh;
+        padding: 0px 15px 40px 25px;
+        background-position: top 30% right 30%;
     }
 
     .hero h1 {
@@ -332,7 +463,15 @@ body {
     .hero h2 {
         font-size: 28px;
     }
-    
+
+    .from-details {
+        padding: 40px;
+    }
+
+    .from-details form {
+        width: 50%;
+    }
+
 }
 
 
@@ -349,7 +488,7 @@ body {
     h1 {
         font-size: 38px;
     }
-    
+
     h2 {
         font-size: 32px;
     }
@@ -379,6 +518,30 @@ body {
     .feature .fe-box h6 {
         padding: 12px 5.2rem;
     }
-}
-/* =========== End of media quary =========== */
 
+    .contact-details {
+        flex-direction: column;
+    }
+
+    .contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact-details .map {
+        width: 100%;
+    }
+
+    .from-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    .from-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* =========== End of media quary =========== */
